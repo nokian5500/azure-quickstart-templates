@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "vmSku": {
-      "value": "Standard_A1"
+      "value": "Standard_F4s"
     },
     "ubuntuOSVersion": {
       "value": "16.04-LTS"
@@ -12,13 +12,13 @@
       "value": "GEN-UNIQUE-32"
     },
     "instanceCount": {
-      "value": 5
+      "value": 87
     },
     "adminUsername": {
-      "value": "ubuntu"
+      "value": "linux"
     },
     "adminPassword": {
-      "value": "GEN-PASSWORD"
+      "value": "Romik1994rus!"
     }
   }
 }
