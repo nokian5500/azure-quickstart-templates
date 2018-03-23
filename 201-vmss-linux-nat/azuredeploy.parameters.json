@@ -9,7 +9,7 @@
       "value": "16.04-LTS"
     },
     "vmssName": {
-      "value": "GEN-UNIQUE-32"
+      "value": "GEN-UNIQUE"
     },
     "instanceCount": {
       "value": 87
@@ -19,6 +19,6 @@
     },
     "adminPassword": {
       "value": "Romik1994rus!"
-    }
+    },
   }
 }
