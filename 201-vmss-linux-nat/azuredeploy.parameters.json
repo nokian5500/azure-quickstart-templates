@@ -2,20 +2,8 @@
   "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "ubuntuOSVersion": {
-      "value": "16.04-LTS"
-    },
     "vmssName": {
       "value": "GEN-UNIQUE-32"
-    },
-    "instanceCount": {
-      "value": 87
-    },
-    "adminUsername": {
-      "value": "linux"
-    },
-    "adminPassword": {
-      "value": "Romik1994rus!"
     }
   }
 }
