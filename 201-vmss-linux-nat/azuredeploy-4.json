@@ -22,7 +22,7 @@
 		},
 		"vmssName": {
 			"type": "string",
-			"defaultValue": "qigtofig",
+			"defaultValue": "qigtafig",
 			"metadata": {
 				"description": "String used as a base for naming resources. Must be 3-61 characters in length and globally unique across Azure. A hash is prepended to this string for some resources, and resource-specific information is appended."
 			},
@@ -30,7 +30,7 @@
 		},
 		"instanceCount": {
 			"type": "int",
-			"defaultValue": 84,
+			"defaultValue": 87,
 			"metadata": {
 				"description": "Number of VM instances (100 or less)."
 			},
