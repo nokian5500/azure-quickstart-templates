@@ -4,7 +4,7 @@
 	"parameters": {
 		"vmSku": {
 			"type": "string",
-			"defaultValue": "Standard_D4s_v3",
+			"defaultValue": "Standard_F4s",
 			"metadata": {
 				"description": "Size of VMs in the VM Scale Set."
 			}
