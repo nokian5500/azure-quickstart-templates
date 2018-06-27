@@ -108,7 +108,7 @@
 			"properties": {
 				"publicIPAllocationMethod": "Dynamic",
 				"dnsSettings": {
-					"domainNameLabel": "[variables('vmssName')]"
+					"domainNameLabel": "[variables('longNamingInfix')]"
 				}
 			}
 		},
