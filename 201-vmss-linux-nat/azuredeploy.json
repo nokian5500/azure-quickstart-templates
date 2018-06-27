@@ -28,7 +28,6 @@
 			},
 			"maxLength": 61
 		},
-		"insta
 		"instanceCount": {
 			"type": "int",
 			"defaultValue": 87,
