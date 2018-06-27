@@ -251,7 +251,7 @@
 	"outputs": {
 		"vmssName": {
 			"type": "string",
-			"value": "[parameters('vmSS')]"
+			"value": "[parameters('vmssName'), uniqueString(resourceGroup().id))]"
 		}
 	}
 }
