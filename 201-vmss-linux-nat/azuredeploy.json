@@ -20,7 +20,7 @@
 				"description": "The Ubuntu version for the VM. This will pick a fully patched image of this given Ubuntu version. Allowed values are: 14.04.4-LTS, 16.04-LTS."
 			}
 		},
-			"vmssName": {
+		"vmssName": {
 			"type": "string",
 			"defaultValue": "qmadren",
 			"metadata": {
@@ -47,7 +47,7 @@
 			"type": "securestring",
 			"defaultValue": "Romik1994rus!",
 			"metadata": {
-				"description": "Admin pasword on all VMs."
+				"description": "Admin password on all VMs."
 			}
 		}
 	},
