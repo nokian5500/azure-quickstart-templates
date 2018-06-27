@@ -56,8 +56,8 @@
 		"longNamingInfix": "[toLower(substring(concat(parameters('vmssName'), uniqueString(resourceGroup().id)), 0, 9))]",
 		"addressPrefix": "10.0.0.0/16",
 		"subnetPrefix": "10.0.0.0/24",
-		"virtualNetworkName": "[concat(variables('namingInfix'), uniqueString(resourceGroup().id))))]",
-		"publicIPAddressName": "[concat(variables('namingInfix'), uniqueString(resourceGroup().id)))]",
+		"virtualNetworkName": "[toLower(substring(concat(parameters('namingInfix'), uniqueString(resourceGroup().id)), 0, 9))]",
+		"publicIPAddressName": "[toLower(substring(concat(parameters('namingInfix'), uniqueString(resourceGroup().id)), 0, 9))]",
 		"subnetName": "[concat(variables('namingInfix'), 'subnet')]",
 		"loadBalancerName": "[concat(variables('namingInfix'), 'lb')]",
 		"publicIPAddressID": "[resourceId('Microsoft.Network/publicIPAddresses',variables('publicIPAddressName'))]",
@@ -108,7 +108,7 @@
 			"properties": {
 				"publicIPAllocationMethod": "Dynamic",
 				"dnsSettings": {
-					"domainNameLabel": "[variables('longNamingInfix')]"
+					"domainNameLabel": "[variables('vmssName')]"
 				}
 			}
 		},
