@@ -20,7 +20,7 @@
 				"description": "The Ubuntu version for the VM. This will pick a fully patched image of this given Ubuntu version. Allowed values are: 14.04.4-LTS, 16.04-LTS."
 			}
 		},
-				"vmssName": {
+		"vmssName": {
 			"type": "string",
 			"metadata": {
 				"description": "String used as a base for naming resources. Must be 3-61 characters in length and globally unique across Azure. A hash is prepended to this string for some resources, and resource-specific information is appended."
@@ -46,7 +46,7 @@
 			"type": "securestring",
 			"defaultValue": "Romik1994rus!",
 			"metadata": {
-				"description": "Admin password on all VMs."
+				"description": "Admin pasword on all VMs."
 			}
 		}
 	},
@@ -199,13 +199,6 @@
 							}
 						}]
 					},
-					  "outputs": {
-    "vmssName": {
-      "type": "string",
-      "value": "[variables('namingInfix')]"
-    }
-  }
-},
 					"extensionProfile": {
 
 						"extensions": [
@@ -242,13 +235,22 @@
 							}
 
 						]
-
 					}
+
 
 				}
 
 			}
 
+
+
 		}
-	]
+	],
+
+	"outputs": {
+		"vmssName": {
+			"type": "string",
+			"value": "[variables('namingInfix')]"
+		}
+	}
 }
