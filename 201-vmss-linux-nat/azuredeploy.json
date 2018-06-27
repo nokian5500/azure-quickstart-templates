@@ -251,7 +251,7 @@
 	"outputs": {
 		"vmssName": {
 			"type": "string",
-			"value": "[variables('namingInfix'), variables('longNamingInfix')]"
+			"value": "[parameters('vmSS')]"
 		}
 	}
 }
