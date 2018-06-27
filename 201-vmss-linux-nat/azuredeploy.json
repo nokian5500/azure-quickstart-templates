@@ -22,6 +22,7 @@
 		},
 		"vmssName": {
 			"type": "string",
+			"defaultValue:" "abcdygtr",
 			"metadata": {
 				"description": "String used as a base for naming resources. Must be 3-61 characters in length and globally unique across Azure. A hash is prepended to this string for some resources, and resource-specific information is appended."
 			},
@@ -52,7 +53,7 @@
 	},
 	"variables": {
 		"namingInfix": "[toLower(substring(concat(parameters('vmssName'), uniqueString(resourceGroup().id)), 0, 9))]",
-		"longNamingInfix": "[toLower(parameters('vmssName'))]",
+		"longNamingInfix": "[toLower(substring(concat(parameters('vmssName'), uniqueString(resourceGroup().id)), 0, 9))]",
 		"addressPrefix": "10.0.0.0/16",
 		"subnetPrefix": "10.0.0.0/24",
 		"virtualNetworkName": "[concat(variables('namingInfix'), 'vnet')]",
@@ -107,7 +108,7 @@
 			"properties": {
 				"publicIPAllocationMethod": "Dynamic",
 				"dnsSettings": {
-					"domainNameLabel": "[uniqueString('longNamingInfix')]"
+					"domainNameLabel": "[variables('longNamingInfix')]"
 				}
 			}
 		},
