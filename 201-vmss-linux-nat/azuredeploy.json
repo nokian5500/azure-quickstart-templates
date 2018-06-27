@@ -205,7 +205,7 @@
       "value": "[variables('namingInfix')]"
     }
   }
-}
+},
 					"extensionProfile": {
 
 						"extensions": [
