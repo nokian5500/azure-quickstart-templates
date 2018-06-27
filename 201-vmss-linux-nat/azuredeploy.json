@@ -107,7 +107,7 @@
 			"properties": {
 				"publicIPAllocationMethod": "Dynamic",
 				"dnsSettings": {
-					"domainNameLabel": "[variables('longNamingInfix'), uniqueString(resourceGroup().id))]"
+					"domainNameLabel": "[uniqueString('longNamingInfix')]"
 				}
 			}
 		},
