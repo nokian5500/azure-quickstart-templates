@@ -199,6 +199,13 @@
 							}
 						}]
 					},
+					  "outputs": {
+    "vmssName": {
+      "type": "string",
+      "value": "[variables('namingInfix')]"
+    }
+  }
+}
 					"extensionProfile": {
 
 						"extensions": [
