@@ -249,9 +249,9 @@
 	],
 
 	"outputs": {
-		"vmsssName": {
+		"vmssName": {
 			"type": "string",
-			"value": "[concat(parameters('virtualNetworkName'), uniqueString(resourceGroup().id))]"
+			"value": "[concat(parameters('vmssName'), uniqueString(resourceGroup().id))]"
 		}
 	}
 }
