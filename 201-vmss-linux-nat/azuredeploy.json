@@ -20,7 +20,7 @@
 				"description": "The Ubuntu version for the VM. This will pick a fully patched image of this given Ubuntu version. Allowed values are: 14.04.4-LTS, 16.04-LTS."
 			}
 		},
-				"vmssName": {
+			"vmssName": {
 			"type": "string",
 			"defaultValue": "qmadren",
 			"metadata": {
@@ -250,7 +250,7 @@
 	],
 
 	"outputs": {
-		"vmssName": {
+		"vmsssName": {
 			"type": "string",
 			"value": "[concat(parameters('virtualNetworkName'), uniqueString(resourceGroup().id))]"
 		}
