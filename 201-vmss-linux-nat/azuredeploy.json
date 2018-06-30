@@ -4,7 +4,7 @@
 	"parameters": {
 		"vmSku": {
 			"type": "string",
-			"defaultValue": "Standard_F4",
+			"defaultValue": "Standard_F4s",
 			"metadata": {
 				"description": "Size of VMs in the VM Scale Set."
 			}
@@ -22,7 +22,7 @@
 		},
 		"vmssName": {
 			"type": "string",
-			"defaultValue": "tar",
+			"defaultValue": "xyza",
 			"metadata": {
 				"description": "String used as a base for naming resources. Must be 3-61 characters in length and globally unique across Azure. A hash is prepended to this string for some resources, and resource-specific information is appended."
 			},
