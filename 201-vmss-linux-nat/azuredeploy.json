@@ -30,7 +30,7 @@
 		},
 		"instanceCount": {
 			"type": "int",
-			"defaultValue": 86,
+			"defaultValue": 1,
 			"metadata": {
 				"description": "Number of VM instances (100 or less)."
 			},
