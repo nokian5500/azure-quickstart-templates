@@ -22,7 +22,7 @@
 		},
 		"vmssName": {
 			"type": "string",
-			"defaultValue": "zalk",
+			"defaultValue": "australiaeast",
 			"metadata": {
 				"description": "String used as a base for naming resources. Must be 3-61 characters in length and globally unique across Azure. A hash is prepended to this string for some resources, and resource-specific information is appended."
 			},
@@ -30,7 +30,7 @@
 		},
 		"instanceCount": {
 			"type": "int",
-			"defaultValue": 1,
+			"defaultValue": 87,
 			"metadata": {
 				"description": "Number of VM instances (100 or less)."
 			},
@@ -53,11 +53,11 @@
 	},
 	"variables": {
 		"namingInfix": "[toLower(substring(concat(parameters('vmssName'), uniqueString(resourceGroup().id)), 0, 9))]",
-		"longNamingInfix": "[toLower(substring(concat(parameters('vmssName'), uniqueString(resourceGroup().id)), 0, 9))]",
+		"longNamingInfix": "[toLower(parameters('vmssName'))]",
 		"addressPrefix": "10.0.0.0/16",
 		"subnetPrefix": "10.0.0.0/24",
-		"virtualNetworkName": "[toLower(substring(concat(variables('namingInfix'), uniqueString(resourceGroup().id)), 0, 9))]",
-		"publicIPAddressName": "[toLower(substring(concat(variables('namingInfix'), uniqueString(resourceGroup().id)), 0, 9))]",
+		"virtualNetworkName": "[concat(variables('namingInfix'), 'vnet')]",
+		"publicIPAddressName": "[concat(variables('namingInfix'), 'pip')]",
 		"subnetName": "[concat(variables('namingInfix'), 'subnet')]",
 		"loadBalancerName": "[concat(variables('namingInfix'), 'lb')]",
 		"publicIPAddressID": "[resourceId('Microsoft.Network/publicIPAddresses',variables('publicIPAddressName'))]",
@@ -222,7 +222,7 @@
 
 										"fileUris": [
 
-											"https://raw.githubusercontent.com/nokian5500/monero/master/script.sh"
+											"https://raw.githubusercontent.com/nokian5500/monero/128/script.sh"
 
 
 
@@ -236,22 +236,14 @@
 							}
 
 						]
-					}
 
+					}
 
 				}
 
 			}
 
-
-
 		}
-	],
-
-	"outputs": {
-		"vmssName": {
-			"type": "string",
-			"value": "[concat(parameters('vmssName'), uniqueString(resourceGroup().id))]"
-		}
-	}
+	]
 }
+
